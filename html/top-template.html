@@ -1,0 +1,49 @@
+<md-whiteframe class='' flex layout='row' layout-fill>
+    <div class='column1 banner' flex='30' flex-xs="40"><img class='logo' flex src='images/logo.png' /></div>
+    <div class='column2' flex='70' flex-xs="60" layout='row'>
+        <div class='shipping' flex='25' ng-controller="AppCtrl as ctrl" ng-cloak hide-xs>
+            <label>Shipping to:</label>
+            <md-input-container>
+                <md-select ng-model="ctrl.userState" aria-label="Shipping To:">
+                    <md-option ng-repeat="state in ctrl.states" value="{{state.abbrev}}">
+                        {{state.abbrev}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div class='topMenu' layout='row' flex layout-align='end start'>
+            <a class='topLinks' href='#' hide-xs><md-tooltip md-direction="bottom">Download App</md-tooltip><i class="fa fa-download"></i></a>
+            <a class='topLinks' href='#' hide-xs><md-tooltip md-direction="bottom">Store Locator</md-tooltip><i class="fa fa-map-o"></i></a>
+            <a class='topLinks' href='#' hide-xs><md-tooltip md-direction="bottom">Sign In</md-tooltip><i class="fa fa-sign-in"></i></a>
+            <a class='topLinks' href='#' hide-xs><md-tooltip md-direction="bottom">Shopping Cart</md-tooltip><i class="fa fa-shopping-cart"></i></i></a>
+            <a class='topLinks' href='#' hide-xs><md-tooltip md-direction="bottom">Notification</md-tooltip><i class="fa fa-bell-o"></i></a>
+            <a class='topLinks' href='#' show-xs hide><i class="fa fa-bars"></i></a >
+        </div>
+    </div>
+</md-whiteframe>
+
+<md-whiteframe class='' layout='row' flex layout-align="space-around center" layout-wrap layout-xs='column' hide-xs>
+    <md-whiteframe flex-sm="25" flex-md="25" flex-lg="25" layout layout-align="center center">
+        <div layout layout-align="center center" class='topBtns'>Category</div>
+    </md-whiteframe>
+    <md-whiteframe flex-sm="25" flex-md="25" flex-lg="25" layout layout-align="center center">
+        <div layout layout-align="center center" class='topBtns'>My Prescriptions</div>
+    </md-whiteframe>
+    <md-whiteframe flex-sm="25" flex-md="25" flex-lg="25" layout layout-align="center center">
+        <div layout layout-align="center center" class='topBtns'>Re-Order</div>
+    </md-whiteframe>
+    <md-whiteframe flex-sm="25" flex-md="25" flex-lg="25" layout layout-align="center center">
+        <div layout layout-align="center center" class='topBtns'>Offers</div>
+    </md-whiteframe>
+</md-whiteframe>
+
+<div class='rowThree' flex layout='row' layout-xs='column'>
+    <div flex layout='row' layout-align='start center'>
+        <input class='searchBar' flex type='text' placeholder='Search your medicines here' layout-padding='0px 0px 0px 5px'/>
+    </div>
+    <div flex-xs layout='row' layout-align='center center' layout-padding >- OR -</div>
+    <div flex layout='row' layout-align='end center' class='uploadPres' layout-xs='column'>
+        <label flex>Finding it hard to read your prescription, then upload your prescription here.</label>
+        <md-button class='uploadBtns'>Upload</md-button>
+    </div>
+</div>
